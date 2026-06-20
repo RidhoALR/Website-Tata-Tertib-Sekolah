@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Tertib - MTsN 1 Palangka Raya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--Navbar-->
+<div class="collapse" id="navbarToggleExternalContent">
+    <div  class="p-3">
+        <div class="d-flex gap-3">
+            <a onclick="openWindow('peraturanWindow')" class="nav-menu-item">
+            <img src="Img/rules-svgrepo-com.svg" alt="Rules">
+            <span>Peraturan</span>
+        </a>
+            <a onclick="openWindow('galeriWindow')" class="nav-menu-item">
+                <img src="Img/gallery-wide-svgrepo-nav-com.svg" alt="gallery">
+                <span>Galeri</span>
+            </a>
+            <a onclick="openWindow('profilWindow')" class="nav-menu-item">
+                <img src="Img/profile-circle-svgrepo-nav-com.svg" alt="profile">
+                <span>Profil</span>
+            </a>
+            <a onclick="openWindow('kontakWindow')" class="nav-menu-item">
+                <img src="Img/email-svgrepo-nav-com.svg" alt="contact">
+                <span>Kontak</span>
+            </a>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-dark  fixed-top">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+            <span  class="navbar-toggler-icon"></span>
+        </button>
+        <span class="navbar-brand ms-2">MTsN 1 Palangka Raya</span>
+        <span class="text-white ms-auto" id="clock"></span>
+    </div>
+</nav>
+    <div class="background">
+        <!-- HOME WINDOW -->
+        <div class="window">
+            <div class="window-titlebar">HOME</div>
+            <div class="window-content">
+                <h1>MTsN 1 Palangka Raya</h1>
+                <p>Siap, Islami, Berprestasi</p>
+                <img src="Img/Kementerian_Agama_new_logo.png" alt="Logo">
+                <div class="icons">
+                    <div class="icon" onclick="openWindow('peraturanWindow')">
+                        <img src="Img/rule-svgrepo-com.svg" alt="Rule">
+                        <p>Peraturan</p>
+                    </div>
+                    <div class="icon" onclick="openWindow('galeriWindow')">
+                        <img src="Img/gallery-wide-svgrepo-com.svg" alt="Galeri">
+                        <p>Galeri</p>
+                    </div>
+                    <div class="icon" onclick="openWindow('profilWindow')">
+                        <img src="Img/profile-round-1346-svgrepo-com.svg" alt="Profil">
+                        <p>Profil</p>
+                    </div>
+                    <div class="icon" onclick="openWindow('kontakWindow')">
+                        <img src="Img/email-svgrepo-com.svg" alt="Email">
+                        <p>Kontak</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERATURAN WINDOW -->
+        <div class="custom-window" id="peraturanWindow">
+            <div class="window-titlebar">
+                <span>PERATURAN</span>
+                <span class="close-btn" onclick="closeWindow('peraturanWindow')">✕</span>
+            </div>
+            <div class="window-content">
+                <div class="peraturan-intro">
+                    <p>Tata tertib sekolah berlaku untuk seluruh siswa MTsN 1 Palangka Raya. Setiap pelanggaran akan dikenakan sanksi sesuai dengan tingkat pelanggarannya. Orang tua/wali siswa diharapkan turut mendukung pelaksanaan tata tertib ini.</p>
+                </div>
+                <div class="alert alert-warning" role="alert">
+    ⚠️ Tahun Ajaran 2025/2026 — Tata tertib ini berlaku efektif mulai 1 Juli 2025.
+                </div> 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">⏰ A. Kehadiran & Ketepatan Waktu</h5>
+                        <span class="badge bg-warning text-dark">Wajib</span>
+                        <p class="card-text mt-2">Siswa dan Siswi wajib hadir paling lambat pukul 07.00 WIB. Kehadiran minimal 80% untuk mengikuti ujian.</p>
+                        <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#kehadiranModal">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">👔 B. Pakaian & Penampilan</h5>
+                        <span class="badge bg-info text-dark">Penting</span>
+                        <p class="card-text mt-2">Siswa dan Siswi wajib mengenakan pakaian yang tertutup dan sopan.</p>
+                        <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#PakaianModal">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">🤝 C. Perilaku & Etika</h5>
+                        <span class="badge bg-danger text-dark">Kritis</span>
+                        <p class="card-text mt-2">Siswa dan Siswi wajib berprilaku dan ber etika yang baik.</p>
+                        <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#PerilakuModal">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">📵 D. Penggunaan HP & Perangkat Elektronik</h5>
+                        <span class="badge bg-secondary text-dark">Perhatian</span>
+                        <p class="card-text mt-2">Siswa dan Siswi di perbiolehkan membawa Handphone dengan syarat sebagai berikut.</p>
+                        <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#HandphoneModal">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">⚠️ E. Sistem Sanksi & Poin Pelanggaran</h5>
+                        <span class="badge bg-warning text-dark">Sanksi</span>
+                        <p class="card-text mt-2">Sanksi untuk siswa dan siswi yang melanggar peraturan sekolah.</p>
+                        <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#SanksiModal">
+                            Lihat Detail
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFIL WINDOW -->
+        <div class="custom-window" id="profilWindow">
+            <div class="window-titlebar">
+                <span>PROFIL</span>
+                <span class="close-btn" onclick="closeWindow('profilWindow')">✕</span>
+            </div>
+            <div class="window-content">
+                <div class="profil-header">
+                    <img  class="school-logo" src="Img/Kementerian_Agama_new_logo.png" alt="Gedung Sekolah" class="profil-img">
+                    <div>
+                        <h2>MTsN 1 Palangka Raya</h2>
+                        <p>MTsN 1 Palangka Raya adalah madrasah tsanawiyah negeri yang berkomitmen menciptakan generasi penerus bangsa yang cerdas, berakhlak mulia, dan berdisiplin tinggi berdasarkan nilai-nilai Islam.</p>
+                    </div>
+                </div>
+                <div class="peraturan-section">
+                    <h3>📖 Sejarah Sekolah</h3>
+                    <p>Madrasah ini didirikan atas inisiatif pemerintah daerah untuk memenuhi kebutuhan pendidikan menengah berbasis Islam di wilayah Palangka Raya. Seiring berjalannya waktu, madrasah terus berkembang dengan fasilitas modern termasuk laboratorium IPA, laboratorium komputer, perpustakaan, dan lapangan olahraga.</p>
+                </div>
+                <div class="visi-misi-row">
+                    <div class="visi-box">
+                        <h3>👁️ Visi</h3>
+                        <p>Menjadi madrasah unggulan yang menghasilkan lulusan berkarakter islami, berprestasi, dan mampu bersaing di tingkat nasional berdasarkan iman dan taqwa.</p>
+                    </div>
+                    <div class="misi-box">
+                        <h3>🎯 Misi</h3>
+                        <ol>
+                            <li>Menyelenggarakan pembelajaran yang aktif dan inovatif</li>
+                            <li>Membina karakter siswa melalui kegiatan islami dan ekstrakurikuler</li>
+                            <li>Menegakkan disiplin dan tata tertib secara konsisten</li>
+                            <li>Menjalin kerjasama dengan orang tua dan masyarakat</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="peraturan-section">
+                    <h3>📊 Data Sekolah</h3>
+                    <table class="seragam-table">
+                        <tr><th>Keterangan</th><th>Informasi</th></tr>
+                        <tr><td>Nama Sekolah</td><td>MTsN 1 Palangka Raya</td></tr>
+                        <tr><td>NPSN</td><td>30203872</td></tr>
+                        <tr><td>Akreditasi</td><td><strong>A (Unggul)</strong></td></tr>
+                        <tr><td>Alamat</td><td>Jl. AIS Nasution No.3, Palangka Raya</td></tr>
+                        <tr><td>Kepala Madrasah</td><td>Drs. H. Ahmad, M.Pd.</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALERI WINDOW -->
+        <div class="custom-window" id="galeriWindow">
+            <div class="window-titlebar">
+                <span>GALERI</span>
+                <span class="close-btn" onclick="closeWindow('galeriWindow')">✕</span>
+            </div>
+            <div class="window-content">
+                <div class="peraturan-intro">
+                    <p>Dokumentasi berbagai kegiatan siswa yang mencerminkan penerapan tata tertib sekolah dalam kehidupan sehari-hari di MTsN 1 Palangka Raya.</p>
+                </div>
+                <div class="peraturan-section">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"></button>
+                        </div>
+                        <h3>📸 Kegiatan Sekolah</h3>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Img/Upacara-bendera.jpeg" class="d-block w-100" alt="Upacara Bendera">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Upacara Bendera</h5>
+                                    <p>Membangun disiplin sejak dini</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Kegiatan-belajar.jpg" class="d-block w-100" alt="Kegiatan Belajar">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Kegiatan Belajar</h5>
+                                    <p>Prestasi dimulai dari kelas</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/extrakurikuler.jpg" class="d-block w-100" alt="Ekstrakurikuler">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Ekstrakurikuler</h5>
+                                    <p>Mengembangkan bakat dan karakter</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Senam.jpg" class="d-block w-100" alt="Senam bersama">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Senam</h5>
+                                    <p>Membentuk tubuh yang sehat dan kluat</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/lomba_akademik.jpeg" class="d-block w-100" alt="Lombar Akademik">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Lomba Akademik</h5>
+                                    <p>Memberi minat untuk bersaing</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/bersih-lingkungan-1.jpg" class="d-block w-100" alt="Membersihkan-lingkungan">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Membersihkan lingkungan</h5>
+                                    <p>Tubuh sehat berawal dari lingkungan yang bersih</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="peraturan-section">
+                    <h3>🎯 Daftar Ekstrakurikuler</h3>
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <h4>⚽ Olahraga</h4>
+                            <ul>
+                                <li>Sepak Bola</li>
+                                <li>Basket</li>
+                                <li>Voli</li>
+                                <li>Bulu Tangkis</li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <h4>🎨 Seni & Budaya</h4>
+                            <ul>
+                                <li>Paduan Suara</li>
+                                <li>Tari Tradisional</li>
+                                <li>Drama / Teater</li>
+                                <li>Pramuka</li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <h4>📚 Akademik</h4>
+                            <ul>
+                                <li>KIR</li>
+                                <li>Olimpiade Sains</li>
+                                <li>Debat Bahasa Inggris</li>
+                                <li>Jurnalistik</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KONTAK WINDOW -->
+        <div class="custom-window" id="kontakWindow">
+            <div class="window-titlebar">
+                <span>KONTAK & FORMULIR</span>
+                <span class="close-btn" onclick="closeWindow('kontakWindow')">✕</span>
+            </div>
+            <div class="window-content">
+                <div class="peraturan-intro">
+                    <p>Silakan isi formulir berikut dengan data yang lengkap dan benar. Formulir ini digunakan untuk keperluan administrasi dan pendataan siswa MTsN 1 Palangka Raya.</p>
+                </div>
+                <div class="peraturan-section">
+                    <h3>👤 A. Data Diri Siswa</h3>
+                    <form class="kontak-form">
+                        <div class="form-group">
+                            <label>1. Nama Lengkap *</label>
+                            <input type="text" class="form-control" placeholder="Masukkan nama lengkap sesuai akta lahir">
+                        </div>
+                        <div class="form-group">
+                            <label>2. Alamat Email *</label>
+                            <input type="email" class="form-control" placeholder="contoh@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>3. Kata Sandi *</label>
+                            <input type="password" class="form-control" placeholder="Minimal 8 karakter">
+                        </div>
+                        <div class="form-group">
+                            <label>4. Usia *</label>
+                            <input type="number" class="form-control" placeholder="Masukkan usia Anda" min="10" max="25">
+                        </div>
+                        <div class="form-group">
+                            <label>5. Tanggal Lahir *</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>6. Jenis Kelamin *</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki</label>
+                                <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>7. Kelas *</label>
+                            <select class="form-control">
+                                <option value="">-- Pilih Kelas --</option>
+                                <option>Kelas VII-A</option>
+                                <option>Kelas VII-B</option>
+                                <option>Kelas VIII-A</option>
+                                <option>Kelas VIII-B</option>
+                                <option>Kelas IX-A</option>
+                                <option>Kelas IX-B</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="peraturan-section">
+                    <h3>🎯 B. Minat & Kegiatan</h3>
+                    <form class="kontak-form">
+                        <div class="form-group">
+                            <label>8. Pilih Ekstrakurikuler yang Diminati</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox"> ⚽ Sepak Bola</label>
+                                <label><input type="checkbox"> 🏀 Basket</label>
+                                <label><input type="checkbox"> 🎵 Paduan Suara</label>
+                                <label><input type="checkbox"> 📚 KIR</label>
+                                <label><input type="checkbox"> 🏕️ Pramuka</label>
+                                <label><input type="checkbox"> 🗣️ Debat</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>9. Upload Foto Siswa *</label>
+                            <input type="file" class="form-control" accept="image/*">
+                            <small>Format: JPG, PNG. Ukuran maksimal 2MB.</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="peraturan-section">
+                    <h3>✍️ C. Pernyataan</h3>
+                    <form class="kontak-form">
+                        <div class="form-group">
+                            <label>10. Pernyataan Kesanggupan *</label>
+                            <textarea class="form-control" rows="4" placeholder="Tulis pernyataan bahwa kamu bersedia mematuhi seluruh tata tertib sekolah..."></textarea>
+                        </div>
+                        <div class="form-group persetujuan">
+                            <label><input type="checkbox"> Saya menyatakan bahwa data yang saya isi adalah benar dan bersedia mematuhi seluruh tata tertib yang berlaku.</label>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="reset" class="btn btn-secondary">🗑️ Reset Form</button>
+                            <button type="submit" class="btn btn-primary">📤 Kirim Formulir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL KEHADIRAN -->
+<div class="modal fade" id="kehadiranModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">⏰ Kehadiran & Ketepatan Waktu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Siswa wajib hadir paling lambat pukul <strong>07.00 WIB</strong></li>
+                    <li>Bel masuk berbunyi pukul 07.00 WIB, siswa terlambat wajib lapor guru piket</li>
+                    <li>Terlambat lebih dari 15 menit dianggap alpa</li>
+                    <li>Tidak hadir wajib menyerahkan surat izin maksimal <strong>H+1</strong></li>
+                    <li>Sakit lebih dari 3 hari wajib surat dokter</li>
+                    <li>Kehadiran minimal <strong>80%</strong> untuk ikut ujian</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PAKAIAN -->
+<div class="modal fade" id="PakaianModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">👔 Pakaian & Penampilan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="seragam-table">
+                    <tr><th>Hari</th><th>Seragam</th></tr>
+                    <tr><td>Senin – Selasa</td><td>Putih – Abu (seragam OSIS lengkap)</td></tr>
+                    <tr><td>Rabu – Kamis</td><td>Seragam Pramuka</td></tr>
+                    <tr><td>Jumat</td><td>Seragam Batik / Baju Muslim</td></tr>
+                </table>
+                <ul class="mt-3">
+                    <li>Seragam harus bersih, rapi, dan dikancingkan dengan benar</li>
+                    <li>Siswa putra rambut tidak boleh melebihi telinga dan kerah baju</li>
+                    <li>Siswa putri tidak diperbolehkan memakai make-up berlebihan</li>
+                    <li>Sepatu warna hitam dengan kaos kaki putih (Senin–Kamis)</li>
+                    <li>Dilarang memakai aksesoris berlebihan</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL PERILAKU -->
+<div class="modal fade" id="PerilakuModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">🤝 Perilaku & Etika</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Wajib menghormati seluruh guru, staf, dan sesama siswa</li>
+                    <li>Dilarang membully, berkelahi, atau melakukan tindak kekerasan</li>
+                    <li>Dilarang membawa, menyimpan, atau mengonsumsi rokok, minuman beralkohol, dan narkoba</li>
+                    <li>Dilarang membawa senjata tajam ke lingkungan sekolah</li>
+                    <li>Wajib menjaga kebersihan kelas dan lingkungan sekolah</li>
+                    <li>Dilarang melakukan vandalisme</li>
+                    <li>Dilarang berpacaran secara berlebihan di lingkungan sekolah</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL HANDPHONE -->
+<div class="modal fade" id="HandphoneModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">📵 Penggunaan HP & Perangkat Elektronik</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>HP boleh dibawa tetapi <strong>wajib dimatikan atau mode senyap</strong> selama jam pelajaran</li>
+                    <li>Penggunaan HP di kelas hanya diperbolehkan atas izin guru</li>
+                    <li>HP yang digunakan tanpa izin akan disita dan dikembalikan kepada orang tua</li>
+                    <li>Dilarang merekam atau memotret tanpa izin di lingkungan sekolah</li>
+                    <li>Penggunaan media sosial selama jam pelajaran dilarang keras</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL SANKSI -->
+<div class="modal fade" id="SanksiModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">⚠️ Sistem Sanksi & Poin Pelanggaran</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ol>
+                    <li><strong>Peringatan Lisan</strong> — Pelanggaran ringan pertama kali (poin 1–25)</li>
+                    <li><strong>Surat Peringatan I</strong> — Akumulasi poin 26–50, ditandatangani orang tua</li>
+                    <li><strong>Surat Peringatan II + Panggilan Orang Tua</strong> — Poin 51–75</li>
+                    <li><strong>Skorsing</strong> — Poin 76–90, tidak masuk 1–3 hari</li>
+                    <li><strong>Dikembalikan ke Orang Tua</strong> — Poin di atas 90</li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+<footer class="footer">
+    <p>© 2026 MTsN 1 Palangka Raya — Siap, Islami, Berprestasi</p>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
