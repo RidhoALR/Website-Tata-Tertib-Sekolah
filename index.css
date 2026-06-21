@@ -387,9 +387,16 @@ body{
     padding: 1rem;
     font-size: 0.8rem;
 }
+#kontakWindow {
+    top: 50%;
+}
+
 @media (max-width: 576px) {
     .window-content h1 {
         font-size: 1.3rem;
+    }
+        #kontakWindow {
+        top: 45%;
     }
     .window-content p {
         font-size: 16px;
