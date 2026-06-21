@@ -420,4 +420,31 @@ body{
     .custom-window{
         top: 60%;
     }
+    .peraturan-section {
+        padding: 0.8rem 1rem;
+    }
+    .peraturan-section h3 {
+        font-size: 0.9rem;
+    }
+    .seragam-table {
+        font-size: 0.75rem;
+    }
+    .seragam-table th,
+    .seragam-table td {
+        padding: 6px 8px;
+    }
+    .visi-box p,
+    .misi-box ol {
+        font-size: 0.8rem;
+    }
+    .custom-window .window-content {
+        padding: 1rem;
+    }
+    .form-buttons {
+        flex-direction: column;
+    }
+    .form-buttons .btn {
+        width: 100%;
+    }
 }
+
