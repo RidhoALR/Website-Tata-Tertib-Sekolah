@@ -15,7 +15,11 @@ function closeWindow(id) {
         win.classList.remove('active');
         win.style.transform = '';
         win.style.left = '50%';
-        win.style.top = window.innerWidth <= 576 ? '60%' : '50%';
+        if (id === 'kontakWindow') {
+            win.style.top = window.innerWidth <= 576 ? '45%' : '50%';
+        } else {
+            win.style.top = window.innerWidth <= 576 ? '60%' : '50%';
+        }
         win.style.translate = '-50% -50%';
         win.dataset.dragged = 'false';
     }, 200);
