@@ -16,7 +16,7 @@ function closeWindow(id) {
         win.style.transform = '';
         win.style.left = '50%';
         if (id === 'kontakWindow') {
-            win.style.top = window.innerWidth <= 576 ? '45%' : '50%';
+            win.style.top = window.innerWidth <= 576 ? '70%' : '50%';
         } else {
             win.style.top = window.innerWidth <= 576 ? '60%' : '50%';
         }
